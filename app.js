@@ -2,7 +2,7 @@ var http=require('http');
 var url=require('url');
 var fs=require('fs');
 var express=require('express');
-var app=express();
+const app=express();
 const PORT =process.env.PORT || 3000;
 
 app.get('/',(req,res)=>{
@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
         else{
             res.write(data);
         }
-        res.end();
+        
     })
     
 })
@@ -25,7 +25,7 @@ app.get('/file1',(req,res)=>{
         else{
             res.write(data);
         }
-        res.end();
+       
     })
 })
 app.get('/file2',(req,res)=>{
@@ -36,7 +36,7 @@ app.get('/file2',(req,res)=>{
         else{
             res.write(data);
         }
-        res.end();
+        
     })
 })
 app.get('/file3',(req,res)=>{
@@ -47,8 +47,9 @@ app.get('/file3',(req,res)=>{
         else{
             res.write(data);
         }
-        res.end();
+        
     })
 })
+
 console.group(PORT);
 app.listen(PORT);
