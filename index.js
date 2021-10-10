@@ -5,7 +5,7 @@ var express=require('express');
 var app=express();
 const PORT =process.env.PORT || 3000;
 
-app.get('/',(req,res)=>{
+app.get('/favicon.ico',(req,res)=>{
     fs.readFile('./index.html',null,function(err,data){
         if(err){
             res.write("error");
