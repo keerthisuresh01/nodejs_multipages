@@ -1,8 +1,8 @@
 {
-  "main": "index.js",
+  "main":"app.js",
   "scripts": {
-    "start": "index.js"
-  },
+    "start": "node app.js"
+ },
   "dependencies": {
     "express": "^4.17.1",
     "node": "^16.10.0"
